@@ -1,0 +1,1528 @@
+@charset "UTF-8";
+/*Глобальные стили*/
+@font-face {
+  font-family: 'roboto-black';
+  src: url("../fonts/roboto-black.woff2") format("woff2"), url("../fonts/roboto-black.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-condensed-light-italic';
+  src: url("../fonts/roboto-condensed-light-italic.woff2") format("woff2"), url("../fonts/roboto-condensed-light-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-light';
+  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-light-italic';
+  src: url("../fonts/roboto-light-italic.woff2") format("woff2"), url("../fonts/roboto-light-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-medium';
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-regular';
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-thin';
+  src: url("../fonts/roboto-thin.woff2") format("woff2"), url("../fonts/roboto-thin.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'roboto-thin-italic';
+  src: url("../fonts/roboto-thin-italic.woff2") format("woff2"), url("../fonts/roboto-thin-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff; }
+
+a {
+  text-decoration: none;
+  outline: 0; }
+
+.page-wrap {
+  margin: 0 auto;
+  min-width: 720px; }
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+/*Конец - Глобальных стилей*/
+/*Блок: Шапка сайта - навигация*/
+.page-header {
+  background-color: #282828;
+  outline: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 53px;
+  border-top: 4px solid #f24841;
+  background-color: #282828; }
+
+.page-header--fixed {
+  position: fixed;
+  z-index: 2; }
+
+.main-nav {
+  min-height: 55px;
+  position: relative;
+  background-color: #282828; }
+  .main-nav::after {
+    content: "меню";
+    left: 113px;
+    top: 6px;
+    position: absolute;
+    font-family: "roboto-light", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase; }
+
+.main-nav__toggle {
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 73px;
+  width: 30px;
+  height: 20px;
+  border: none;
+  z-index: 3;
+  background: 0 0;
+  cursor: pointer;
+  outline: none; }
+
+.main-nav__toggle--opened::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.main-nav__toggle--opened::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -1px;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.main-nav__toggle--closed::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff; }
+
+.site-list--none {
+  display: none; }
+
+.main-nav__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.site-list__item {
+  min-height: 53px;
+  border-top: 1px solid #f24841;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #282828;
+  width: 100%; }
+  .site-list__item:focus, .site-list__item:hover {
+    text-decoration: underline; }
+
+.site-list__item a {
+  font-family: "roboto-thin", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 34px;
+  color: #ffffff;
+  font-weight: 400; }
+
+@media (min-width: 768px) {
+  .page-header {
+    height: 55px;
+    border-top: 2.7px solid #f24841; } }
+
+@media (min-width: 1200px) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .main-nav::after {
+      content: ""; }
+  .main-nav__wrapper {
+    width: 1106px;
+    padding-right: 353px;
+    box-sizing: border-box; }
+  .page-header--fixed {
+    position: absolute; }
+  .page-header {
+    height: 104px;
+    border-top: 5px solid #f24841; }
+  .site-list {
+    margin-top: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 96px; }
+  .site-list__item {
+    text-align: left;
+    border-top: none;
+    box-sizing: border-box;
+    padding: 5px; }
+  .site-list__item:nth-child(1) {
+    margin-right: 40px; }
+  .site-list__item:nth-child(2) {
+    margin-right: 11px; }
+  .site-list__item:nth-child(3) {
+    margin-right: 43px; }
+  .site-list__item:nth-child(4) {
+    margin-right: 40px; }
+  .main-nav__toggle {
+    display: none; } }
+
+/*Основаня часть*/
+/*Блок: Вступительная часть*/
+.intro {
+  min-height: 355px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%; }
+
+.intro__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-left: 8%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  min-height: 355px;
+  width: 100%;
+  background-image: url("../img/intro-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: "roboto-black", Arial, sans-serif;
+  text-transform: uppercase; }
+
+.intro__logo {
+  width: 50%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-right: -69px;
+  margin-left: 58px; }
+
+.intro__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+  margin: 0; }
+
+.intro__frame {
+  position: relative;
+  left: -15px;
+  top: 0;
+  margin-top: -117px;
+  width: 305px;
+  height: 166px;
+  background: url("../img/date-bg-mobile.png") no-repeat 50% 50%; }
+
+.intro__name {
+  margin-top: -120px;
+  margin-bottom: 0;
+  min-height: 80px;
+  padding-top: 4px;
+  font-size: 40px;
+  line-height: 39px;
+  font-weight: 400;
+  color: #000000; }
+
+.intro__badge {
+  position: relative;
+  left: -289px;
+  top: -11px;
+  content: "";
+  width: 100px;
+  height: 120px;
+  background: url("../img/logo-name.svg") no-repeat 50% 50%; }
+
+.intro__сity {
+  margin: 0;
+  min-height: 40px;
+  padding-top: 25px;
+  padding-right: 89px;
+  font-size: 72px;
+  line-height: 31.5px;
+  font-weight: 400;
+  color: #f24841; }
+
+.intro__time {
+  margin: 0;
+  padding-left: 175px;
+  padding-top: 3px;
+  padding-bottom: 13px;
+  font-size: 15.5px;
+  line-height: 20.5px;
+  font-weight: 400;
+  color: #f24841; }
+
+.intro__hotels {
+  margin: 0;
+  padding-left: 135px;
+  font-size: 15.5px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000; }
+
+.intro__text {
+  text-align: center;
+  margin: 0;
+  margin-left: -67px;
+  padding-top: 22px;
+  width: 100%;
+  font-family: "roboto-medium", Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000; }
+
+@media (min-width: 768px) {
+  .intro__wrapper {
+    min-height: 370px; }
+  .intro__wrapper {
+    padding-top: 105px; }
+  .intro__logo {
+    margin-right: -69px;
+    margin-left: 69px; }
+  .intro__badge {
+    left: -304px;
+    top: -8px;
+    width: 104px; }
+  .intro__name {
+    margin-top: -121px;
+    font-size: 42px;
+    line-height: 41px;
+    font-weight: 400; }
+  .intro__сity {
+    padding-top: 25px;
+    padding-right: 94px;
+    font-size: 75px;
+    line-height: 32px; }
+  .intro__time {
+    padding-left: 182px;
+    padding-top: 1px;
+    padding-bottom: 14px;
+    font-size: 16.15px;
+    line-height: 21.5px; }
+  .intro__hotels {
+    padding-left: 139px;
+    font-size: 16.15px;
+    line-height: 22px; }
+  .intro__frame {
+    left: -18px;
+    margin-top: -124px;
+    width: 319px;
+    height: 180px;
+    background-size: 100%; }
+  .intro__text {
+    margin-left: -62px;
+    padding-top: 22px;
+    font-size: 16.35px;
+    line-height: 21.5px; } }
+
+@media (min-width: 1200px) {
+  .intro__wrapper {
+    min-height: 695px; }
+  .intro__wrapper {
+    padding-top: 105px; }
+  .intro__logo {
+    margin-right: -103px;
+    margin-left: 92px; }
+  .intro__badge {
+    left: -573px;
+    top: 64px;
+    width: 191px;
+    height: 243px; }
+  .intro__name {
+    margin-top: -151px;
+    font-size: 79px;
+    line-height: 76px;
+    font-weight: 400; }
+  .intro__сity {
+    padding-top: 61px;
+    padding-right: 174px;
+    font-size: 141px; }
+  .intro__time {
+    padding-left: 313px;
+    padding-top: 89px;
+    padding-bottom: 27px;
+    font-size: 30.2px;
+    line-height: 40.2px; }
+  .intro__hotels {
+    padding-left: 234px;
+    font-size: 30.18px;
+    line-height: 40.24px; }
+  .intro__frame {
+    left: -62px;
+    margin-top: -225px;
+    width: 599px;
+    height: 322px;
+    background-size: 100%;
+    background: url("../img/date-bg.png") no-repeat 50% 50%; }
+  .intro__text {
+    margin-left: -155px;
+    padding-top: 26px;
+    font-size: 30.48px;
+    line-height: 40.24px; } }
+
+/*Блок: Форма с регистрацией*/
+.registration {
+  background-color: #282828;
+  min-height: 296px;
+  width: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.registration__wrapper {
+  width: 720px;
+  margin: 0; }
+
+.registration__form {
+  height: 244px;
+  padding-top: 32px;
+  padding-bottom: 29px;
+  box-sizing: border-box;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.registration__legend {
+  margin: 0;
+  padding-top: 32px;
+  text-align: center;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 20.58px;
+  color: #ffffff; }
+
+.registration__name,
+.registration__tel,
+.registration__email {
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 25.26px;
+  color: #909090;
+  border: none;
+  box-sizing: border-box;
+  width: 227px;
+  height: 32px;
+  padding-left: 6px; }
+  .registration__name:focus, .registration__name:hover,
+  .registration__tel:focus,
+  .registration__tel:hover,
+  .registration__email:focus,
+  .registration__email:hover {
+    outline: 2px solid #f24841;
+    color: #000000; }
+
+.registration__button {
+  margin-top: 21px;
+  width: 227px;
+  height: 32px;
+  background-color: #f24841;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25.26px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer; }
+  .registration__button:focus, .registration__button:hover {
+    outline: 2px solid #f24841;
+    background-color: #f15953; }
+
+@media (min-width: 768px) {
+  .registration {
+    min-height: 97px; }
+  .registration__wrapper {
+    width: 598px;
+    padding-left: 33px;
+    padding-right: 10px; }
+  .registration__legend {
+    padding-top: 12px;
+    padding-left: 6px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 21.5px; }
+  .registration__form {
+    height: 48px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .registration__name,
+  .registration__tel,
+  .registration__email {
+    margin-top: 2px;
+    width: 129px;
+    height: 27px;
+    font-size: 8.6px;
+    line-height: 21.53px; }
+  .registration__button {
+    margin-top: 2px;
+    width: 194px;
+    height: 27px;
+    font-size: 13px;
+    line-height: 21.53px; } }
+
+@media (min-width: 1200px) {
+  .registration__wrapper {
+    width: 1117px;
+    padding-left: 0px;
+    padding-right: 0px; }
+  .registration__legend {
+    padding-top: 19px;
+    padding-left: 14px;
+    text-align: left;
+    font-size: 24px;
+    line-height: 40.25px; }
+  .registration__form {
+    height: 120px;
+    padding-top: 18px;
+    padding-bottom: 51px; }
+  .registration__name,
+  .registration__tel,
+  .registration__email {
+    margin-top: 2px;
+    width: 242px;
+    height: 50px;
+    font-size: 16.1px;
+    line-height: 40.24px; }
+  .registration__button {
+    margin-top: 2px;
+    width: 362px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 40.25px; } }
+
+/*Блок: О тренинге*/
+.about-trainings {
+  min-height: 656px;
+  width: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.about-trainings__wrapper {
+  padding-top: 53px;
+  text-align: left; }
+
+.about-trainings__definition {
+  width: 625px;
+  margin-right: 7px;
+  color: #282828; }
+  .about-trainings__definition h2 {
+    margin: 0;
+    font-family: "roboto-black", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 34px;
+    text-transform: uppercase; }
+  .about-trainings__definition p {
+    margin-bottom: 25px; }
+
+.about-trainings__speaker {
+  display: none;
+  width: 352px;
+  height: 233px;
+  margin: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/speaker-min.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 98%; }
+
+.about-trainings__quote {
+  margin: 0;
+  font-family: "roboto-thin-italic", Arial, sans-serif;
+  font-size: 8px;
+  line-height: 11px;
+  margin-top: 80px;
+  margin-left: 13px;
+  width: 100px;
+  color: #282828; }
+
+.about-trainings__salient {
+  margin-top: 22px;
+  padding-left: 11px;
+  padding-top: 21px;
+  box-sizing: border-box;
+  width: 105px;
+  color: #ffffff;
+  font-size: 8.6px;
+  line-height: 13px;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.about-trainings__position {
+  font-family: "roboto-black", Arial, sans-serif; }
+
+.about-trainings__speaker-name {
+  margin-top: 11px;
+  font-family: "roboto-light", Arial, sans-serif;
+  font-style: normal; }
+
+.about-trainings__features-list {
+  margin: 0;
+  padding-left: 50px;
+  box-sizing: border-box;
+  list-style: none;
+  min-height: 272px;
+  width: 625px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.about-trainings__features-item {
+  padding-top: 85px;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 17.55px;
+  color: #282828; }
+
+.about-trainings__features-item--participant {
+  width: 216px;
+  background-image: url("../img/participant.svg");
+  background-repeat: no-repeat;
+  background-size: 50px 48px;
+  background-position: 0px 25px; }
+
+.about-trainings__features-item--motivation {
+  width: 216px;
+  background-image: url("../img/motivation.svg");
+  background-repeat: no-repeat;
+  background-size: 47px 52px;
+  background-position: 0px 19px; }
+
+.about-trainings__features-item--scaling {
+  width: 143px;
+  background-image: url("../img/scaling.svg");
+  background-repeat: no-repeat;
+  background-size: 43px 57px;
+  background-position: 0px 13px; }
+
+.about-trainings__features-item--prospects {
+  width: 216px;
+  background-image: url("../img/prospects.svg");
+  background-repeat: no-repeat;
+  background-size: 45px 42px;
+  background-position: 0px 29px; }
+
+.about-trainings__features-item--recommendations {
+  width: 216px;
+  background-image: url("../img/recommendations.svg");
+  background-repeat: no-repeat;
+  background-size: 45px 48px;
+  background-position: 1px 23px; }
+
+.about-trainings__features-item--experience {
+  width: 143px;
+  background-image: url("../img/experience.svg");
+  background-repeat: no-repeat;
+  background-size: 58px 58px;
+  background-position: 0px 13px; }
+
+@media (min-width: 768px) {
+  .about-trainings {
+    min-height: 396px; }
+  .about-trainings__wrapper {
+    padding-top: 28px;
+    width: 618px;
+    margin-left: 14px;
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .about-trainings__definition {
+    width: 266px;
+    margin-right: 0px;
+    padding-top: 29px; }
+    .about-trainings__definition h2 {
+      margin: 0;
+      font-family: "roboto-black", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 21.5px; }
+    .about-trainings__definition p {
+      font-size: 9px;
+      line-height: 13px;
+      margin-bottom: 13px; }
+  .about-trainings__speaker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .about-trainings__features-list {
+    margin: 0;
+    padding-left: 0px;
+    min-height: 136px;
+    width: 625px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+  .about-trainings__features-item {
+    padding-top: 71px;
+    margin: 0;
+    font-size: 8.6px;
+    line-height: 12.9px;
+    color: #282828; }
+  .about-trainings__features-item--participant {
+    width: 83px;
+    background-size: 40px 35px;
+    background-position: 0px 28px; }
+  .about-trainings__features-item--motivation {
+    width: 81px;
+    background-size: 33px 51px;
+    background-position: 1px 18px; }
+  .about-trainings__features-item--scaling {
+    width: 109px;
+    background-size: 32px 55px;
+    background-position: 0px 13px; }
+  .about-trainings__features-item--prospects {
+    width: 118px;
+    background-size: 33px 34px;
+    background-position: 1px 29px; }
+  .about-trainings__features-item--recommendations {
+    width: 141px;
+    background-size: 33px 43px;
+    background-position: 1px 23px; }
+  .about-trainings__features-item--experience {
+    width: 92px;
+    background-size: 45px 54px;
+    background-position: 0px 12px; } }
+
+@media (min-width: 1200px) {
+  .about-trainings {
+    min-height: 900px; }
+  .about-trainings__wrapper {
+    padding-top: 90px;
+    width: 1146px;
+    margin-left: 26px; }
+  .about-trainings__definition {
+    width: 470px;
+    margin-right: 0px;
+    padding-top: 57px; }
+    .about-trainings__definition h2 {
+      margin: 0;
+      font-family: "roboto-black", Arial, sans-serif;
+      font-size: 30px;
+      line-height: 40px; }
+    .about-trainings__definition p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 20px;
+      margin-bottom: 25px; }
+  .about-trainings__speaker {
+    width: 675px;
+    height: 435px;
+    background-image: url("../img/speaker.png");
+    background-position: 84% 50%;
+    background-size: 95%; }
+  .about-trainings__quote {
+    font-family: "roboto-condensed-light-italic", Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 161px;
+    margin-left: 53px;
+    width: 160px; }
+  .about-trainings__salient {
+    margin-top: 22px;
+    padding-left: 23px;
+    padding-top: 51px;
+    width: 197px;
+    font-size: 16px;
+    line-height: 24px;
+    height: 170px; }
+  .about-trainings__speaker-name {
+    margin-top: 21px; }
+  .about-trainings__features-list {
+    min-height: 185px;
+    width: 1145px; }
+  .about-trainings__features-item {
+    padding-top: 133px;
+    font-size: 16px;
+    line-height: 24px; }
+  .about-trainings__features-item--participant {
+    width: 150px;
+    background-size: 65px 65px;
+    background-position: 0px 52px; }
+  .about-trainings__features-item--motivation {
+    width: 150px;
+    background-size: 63px 71px;
+    background-position: 0px 46px; }
+  .about-trainings__features-item--scaling {
+    width: 205px;
+    background-size: 62px 82px;
+    background-position: 0px 34px; }
+  .about-trainings__features-item--prospects {
+    width: 218px;
+    background-size: 62px 59px;
+    background-position: 0px 57px; }
+  .about-trainings__features-item--recommendations {
+    width: 263px;
+    background-size: 60px 67px;
+    background-position: 0px 50px; }
+  .about-trainings__features-item--experience {
+    width: 157px;
+    background-size: 81px 81px;
+    background-position: 0px 35px; } }
+
+/*Блок: Медиа*/
+.media {
+  background-color: #282828; }
+
+.media__wrapper {
+  min-height: 1303px;
+  padding-top: 32px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.media__item {
+  height: 636px;
+  cursor: pointer;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%); }
+  .media__item--near-Moscow {
+    background-image: url("../img/Moscow-video.png"), url("../img/Moscow-event.png");
+    background-repeat: no-repeat;
+    background-size: 342px 61px , cover;
+    background-position: center, center; }
+  .media__item--near-Kazahstan {
+    background-image: url("../img/Kazahstan-video.png"), url("../img/Kazahstan-event.png");
+    background-repeat: no-repeat;
+    background-size: 342px 61px, cover;
+    background-position: center, center; }
+  .media__item:hover, .media__item:focus {
+    -webkit-filter: none;
+            filter: none;
+    -webkit-transition: -webkit-filter .4s ease-in-out;
+    transition: -webkit-filter .4s ease-in-out;
+    transition: filter .4s ease-in-out;
+    transition: filter .4s ease-in-out, -webkit-filter .4s ease-in-out; }
+
+@media (min-width: 768px) {
+  .media__wrapper {
+    min-height: 400px;
+    padding-top: 34px;
+    box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .media__item {
+    height: 367px;
+    width: 50%; }
+    .media__item--near-Moscow {
+      background-position: 80% 50%, top center;
+      background-size: 198px 35px , cover; }
+    .media__item--near-Kazahstan {
+      background-position: 21% 50%, top center;
+      background-size: 198px 35px , cover; } }
+
+@media (min-width: 1200px) {
+  .media__wrapper {
+    min-height: 918px;
+    padding-top: 77px;
+    box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .media__item {
+    height: 840px;
+    width: 50%; }
+    .media__item--near-Moscow {
+      background-position: 80% 50%, top center;
+      background-size: 452px 80px , cover; }
+    .media__item--near-Kazahstan {
+      background-position: 21% 50%, top center;
+      background-size: 452px 80px , cover; } }
+
+/*Блок: Отзывы*/
+.reviews {
+  background-color: #282828; }
+
+.reviews_wrapper {
+  min-height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box; }
+
+.reviews__list {
+  margin-right: 10px;
+  padding-top: 31px;
+  width: 577px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.reviews__item {
+  margin: 0;
+  width: 388px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.reviews_author-picture {
+  margin: 0;
+  width: 100%;
+  background-image: url("../img/border-reviews.png");
+  background-repeat: no-repeat;
+  background-position: 37px 19px;
+  background-size: 81%;
+  height: 300px; }
+
+.reviews_author-image {
+  margin-left: 85px; }
+
+.reviews__post {
+  box-sizing: border-box;
+  padding-left: 44px;
+  width: 100%; }
+
+.reviews__prev {
+  padding: 0;
+  margin-top: 70px;
+  height: 77px;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  background-image: url("../img/prev_link_mobile_not_hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 92%;
+  outline: none;
+  cursor: pointer; }
+  .reviews__prev:hover, .reviews__prev:focus {
+    background-image: url("../img/prev_link_mobile.svg"); }
+
+.reviews__next {
+  padding: 0;
+  margin-top: 70px;
+  height: 77px;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: url("../img/next_link_mobile_not_hover.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 92%;
+  outline: none;
+  cursor: pointer; }
+  .reviews__next:hover, .reviews__next:focus {
+    background-image: url("../img/next_link_mobile.svg"); }
+
+.reviews__author-name {
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 27.2px;
+  font-style: normal; }
+
+.reviews__author-post {
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 2px;
+  margin-bottom: 5px; }
+
+.reviews__text {
+  font-family: "roboto-light-italic", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 16.6px;
+  margin-top: 43px;
+  margin-bottom: 5px; }
+
+@media (min-width: 768px) {
+  .reviews_wrapper {
+    min-height: 208px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    box-sizing: border-box; }
+  .reviews__list {
+    margin-right: 10px;
+    padding-top: 16px;
+    width: 490px; }
+  .reviews__item {
+    width: 374px;
+    color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .reviews_author-picture {
+    background-image: url("../img/border-reviews_tablet.png");
+    background-position: 20px 16px;
+    background-size: 86%;
+    height: 153px;
+    width: 198px; }
+  .reviews_author-image {
+    margin-left: 44px;
+    width: 128px;
+    height: 139px; }
+  .reviews__post {
+    padding-left: 2px;
+    padding-top: 15px;
+    width: 50%; }
+  .reviews__prev {
+    margin-top: 23px;
+    height: 75px;
+    width: 48px;
+    background-image: url("../img/prev_link_tablet_not_hover.svg");
+    cursor: pointer; }
+    .reviews__prev:hover, .reviews__prev:focus {
+      background-image: url("../img/prev_link_tablet.svg"); }
+  .reviews__next {
+    margin-top: 23px;
+    height: 75px;
+    width: 48px;
+    background-image: url("../img/next_link_tablet_not_hover.svg");
+    cursor: pointer; }
+    .reviews__next:hover, .reviews__next:focus {
+      background-image: url("../img/next_link_tablet.svg"); }
+  .reviews__author-name {
+    font-size: 11px;
+    line-height: 17.62px; }
+  .reviews__author-post {
+    font-size: 7px;
+    line-height: 11px;
+    margin-top: 0px; }
+  .reviews__text {
+    font-size: 6px;
+    line-height: 8.81px;
+    margin-top: 22px; } }
+
+@media (min-width: 1200px) {
+  .reviews_wrapper {
+    min-height: 473px; }
+  .reviews__list {
+    margin-right: 0px;
+    padding-top: 48px;
+    width: 1140px; }
+  .reviews__item {
+    width: 818px; }
+  .reviews_author-picture {
+    background-image: url("../img/border-reviews.png");
+    background-position: 18px 18px;
+    background-size: 93%;
+    height: 330px;
+    width: 415px; }
+  .reviews_author-image {
+    margin-left: 75px;
+    width: 291px;
+    height: 316px; }
+  .reviews__post {
+    padding-left: 8px;
+    padding-top: 32px;
+    width: 50%; }
+  .reviews__prev {
+    margin-left: 25px;
+    margin-top: 42px;
+    height: 117px;
+    width: 85px;
+    background-image: url("../img/prev_link_desktop_not_hover.svg");
+    cursor: pointer; }
+    .reviews__prev:hover, .reviews__prev:focus {
+      background-image: url("../img/prev_link_desktop.svg"); }
+  .reviews__next {
+    margin-top: 42px;
+    height: 117px;
+    width: 85px;
+    background-image: url("../img/next_link_desktop_not_hover.svg");
+    cursor: pointer; }
+    .reviews__next:hover, .reviews__next:focus {
+      background-image: url("../img/next_link_desktop.svg"); }
+  .reviews__author-name {
+    font-size: 24px;
+    line-height: 40.3px; }
+  .reviews__author-post {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 4px; }
+  .reviews__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 53px; } }
+
+/*Конец - Основаной части*/
+/*Блок: Подвал сайта*/
+.page-footer {
+  background-color: #ffffff;
+  color: #282828;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.page-footer__wrapper {
+  text-align: left;
+  min-height: 1325px;
+  box-sizing: border-box;
+  width: 628px;
+  padding-top: 75px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.page-footer__copyright {
+  padding-left: 12px;
+  box-sizing: border-box;
+  height: 320px;
+  width: 380px; }
+
+.copyright__explanation,
+.copyright__production {
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 25px;
+  line-height: 38.63px; }
+
+.copyright__explanation {
+  margin-top: 18px;
+  margin-bottom: 18px; }
+
+.copyright__production {
+  margin-top: 33px; }
+
+.page-footer__contacts {
+  box-sizing: border-box;
+  padding-top: 36px;
+  height: 470px;
+  width: 100%; }
+
+.contacts__application {
+  width: 434px;
+  height: 87px;
+  display: block;
+  padding: 35px 47px;
+  background-color: #f24841;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 42.35px;
+  line-height: 77.25px;
+  border: none;
+  text-align: center;
+  color: #ffffff;
+  outline: 2px solid #f24841; }
+  .contacts__application:hover, .contacts__application:focus {
+    color: #f1f1f1;
+    background-color: #ff716b; }
+
+.contacts__information {
+  margin: 0;
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 24.2px;
+  line-height: 38.63px;
+  padding-left: 4px;
+  margin-top: 67px; }
+
+.contacts__confidentiality {
+  display: block;
+  width: 435px;
+  margin: 0;
+  font-family: "roboto-regular", Arial, sans-serif;
+  font-size: 28px;
+  line-height: 39px;
+  padding-left: 4px;
+  margin-top: 37px;
+  color: #282828;
+  border-bottom: 1px solid #282828;
+  border-bottom-style: dotted; }
+
+.page-footer__telephone {
+  box-sizing: border-box;
+  padding-top: 42px;
+  height: 360px;
+  width: 100%; }
+
+.telephone__description {
+  margin: 0;
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 24.2px;
+  line-height: 38.8px;
+  padding-left: 4px; }
+
+.telephone__number {
+  padding-left: 4px;
+  margin-top: 52px;
+  display: block;
+  width: 100%;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 43.55px;
+  line-height: 78px;
+  color: #282828; }
+
+.telephone__order-call {
+  width: 271px;
+  display: block;
+  font-family: "roboto-regular", Arial, sans-serif;
+  font-size: 29px;
+  line-height: 50px;
+  padding-left: 4px;
+  margin-top: 59px;
+  color: #282828;
+  border-bottom: 1px solid #282828;
+  border-bottom-style: dotted;
+  text-transform: uppercase; }
+
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    text-align: left;
+    min-height: 174px;
+    box-sizing: border-box;
+    width: 667px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .page-footer__copyright {
+    padding-left: 0px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 33.3%; }
+  .copyright__explanation,
+  .copyright__production {
+    font-size: 8.5px;
+    line-height: 12px; }
+  .copyright__logo {
+    width: 114px;
+    height: 65px; }
+  .copyright__explanation {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    padding-right: 108px; }
+  .copyright__production {
+    margin-top: 16px;
+    margin-bottom: 0; }
+  .page-footer__contacts {
+    box-sizing: border-box;
+    padding-top: 0;
+    height: 100%;
+    width: 33.3%; }
+  .contacts__application {
+    width: 182px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    font-size: 14.5px;
+    line-height: 24.21px; }
+  .contacts__information {
+    margin: 0;
+    font-size: 8.47px;
+    line-height: 12px;
+    padding-left: 1px;
+    margin-top: 25px; }
+  .contacts__confidentiality {
+    width: 156px;
+    font-size: 9.69px;
+    line-height: 15.21px;
+    padding-left: 1px;
+    margin-top: 11px; }
+  .page-footer__telephone {
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-left: 69px;
+    height: 100%;
+    width: 33.3%; }
+  .telephone__description {
+    margin: 0;
+    font-size: 8.47px;
+    line-height: 12px; }
+  .telephone__number {
+    padding-left: 1px;
+    margin-top: 17px;
+    width: 100%;
+    font-size: 14.83px;
+    line-height: 24.21px; }
+  .telephone__order-call {
+    width: 94px;
+    font-size: 10px;
+    line-height: 15px;
+    padding-left: 0;
+    margin-top: 18px; } }
+
+@media (min-width: 1200px) {
+  .page-footer__wrapper {
+    text-align: left;
+    min-height: 302px;
+    box-sizing: border-box;
+    width: 1150px;
+    padding-top: 42px;
+    padding-bottom: 55px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .page-footer__copyright {
+    padding-left: 58px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 33.3%; }
+  .copyright__explanation,
+  .copyright__production {
+    font-size: 14px;
+    line-height: 20px; }
+  .copyright__logo {
+    width: 186px;
+    height: 107px; }
+  .copyright__explanation {
+    margin-top: 9px;
+    margin-bottom: 10px;
+    padding-right: 137px; }
+  .copyright__production {
+    margin-top: 25px;
+    margin-bottom: 0; }
+  .page-footer__contacts {
+    padding-top: 0;
+    width: 33.3%;
+    padding-left: 42px; }
+  .contacts__application {
+    width: 300px;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 17px 17px;
+    font-size: 24px;
+    line-height: 40px; }
+  .contacts__information {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 1px;
+    margin-top: 43px; }
+  .contacts__confidentiality {
+    width: 250px;
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 1px;
+    margin-top: 13px; }
+  .page-footer__telephone {
+    padding-top: 44px;
+    padding-left: 134px; }
+  .telephone__description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px; }
+  .telephone__number {
+    padding-left: 3px;
+    margin-top: 25px;
+    width: 100%;
+    font-size: 25px;
+    line-height: 40px; }
+  .telephone__order-call {
+    margin-left: 5px;
+    width: 161px;
+    font-size: 16.5px;
+    line-height: 20px;
+    margin-top: 33px; } }

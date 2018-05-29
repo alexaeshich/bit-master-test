@@ -1,0 +1,234 @@
+.intro {
+  min-height: 355px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.intro__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 8%;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  min-height: 355px;
+  width: 100%;
+  background-image: url('../img/intro-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: "roboto-black", Arial, sans-serif;
+  text-transform: uppercase;
+
+}
+
+.intro__logo {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-right: -69px;
+  margin-left: 58px;
+
+}
+.intro__date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  margin: 0;
+}
+
+.intro__frame {
+  position: relative;
+  left: -15px;
+  top: 0;
+  margin-top: -117px;
+  width: 305px;
+  height: 166px;
+  background: url('../img/date-bg-mobile.png') no-repeat 50% 50%;
+}
+
+.intro__name {
+  margin-top: -120px;
+  margin-bottom: 0;
+  min-height: 80px;
+  padding-top: 4px;
+  font-size: 40px;
+  line-height: 39px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.intro__badge {
+  position: relative;
+  left: -289px;
+  top: -11px;
+  content: "";
+  width: 100px;
+  height: 120px;
+  background: url('../img/logo-name.svg') no-repeat 50% 50%;
+}
+.intro__сity {
+  margin: 0;
+  min-height: 40px;
+  padding-top: 25px;
+  padding-right: 89px;
+  font-size: 72px;
+  line-height: 31.5px;
+  font-weight: 400;
+  color: #f24841;
+}
+
+.intro__time {
+  margin: 0;
+  padding-left: 175px;
+  padding-top: 3px;
+  padding-bottom: 13px;
+  font-size: 15.5px;
+  line-height: 20.5px;
+  font-weight: 400;
+  color: #f24841;
+
+}
+
+.intro__hotels {
+  margin: 0;
+  padding-left: 135px;
+  font-size: 15.5px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.intro__text {
+  text-align: center;
+  margin: 0;
+  margin-left: -67px;
+  padding-top: 22px;
+  width: 100%;
+  font-family: "roboto-medium", Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+}
+
+
+@media (min-width:$tablet-width) {
+  .intro__wrapper {
+    min-height: 370px;
+  }
+  .intro__wrapper {
+    padding-top: 105px;
+  }
+  .intro__logo {
+    margin-right: -69px;
+    margin-left: 69px;
+  }
+  .intro__badge {
+    left: -304px;
+    top: -8px;
+    width: 104px;
+  }
+
+  .intro__name {
+    margin-top: -121px;
+    font-size: 42px;
+    line-height: 41px;
+    font-weight: 400;
+  }
+  .intro__сity {
+    padding-top: 25px;
+    padding-right: 94px;
+    font-size: 75px;
+    line-height: 32px;
+  }
+  .intro__time {
+    padding-left: 182px;
+    padding-top: 1px;
+    padding-bottom: 14px;
+    font-size: 16.15px;
+    line-height: 21.5px;
+  }
+  .intro__hotels {
+    padding-left: 139px;
+    font-size: 16.15px;
+    line-height: 22px;
+  }
+  .intro__frame {
+    left: -18px;
+    margin-top: -124px;
+    width: 319px;
+    height: 180px;
+    background-size: 100%;
+  }
+  .intro__text {
+    margin-left: -62px;
+    padding-top: 22px;
+    font-size: 16.35px;
+    line-height: 21.5px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .intro__wrapper {
+    min-height: 695px;
+  }
+  .intro__wrapper {
+    padding-top: 105px;
+  }
+  .intro__logo {
+    margin-right: -103px;
+    margin-left: 92px;
+  }
+  .intro__badge {
+    left: -573px;
+    top: 64px;
+    width: 191px;
+    height: 243px;
+  }
+
+  .intro__name {
+    margin-top: -151px;
+    font-size: 79px;
+    line-height: 76px;
+    font-weight: 400;
+  }
+  .intro__сity {
+    padding-top: 61px;
+    padding-right: 174px;
+    font-size: 141px;
+  }
+  .intro__time {
+    padding-left: 313px;
+    padding-top: 89px;
+    padding-bottom: 27px;
+    font-size: 30.2px;
+    line-height: 40.2px;
+  }
+  .intro__hotels {
+    padding-left: 234px;
+    font-size: 30.18px;
+    line-height: 40.24px;
+  }
+  .intro__frame {
+    left: -62px;
+    margin-top: -225px;
+    width: 599px;
+    height: 322px;
+    background-size: 100%;
+    background: url('../img/date-bg.png') no-repeat 50% 50%;
+  }
+  .intro__text {
+    margin-left: -155px;
+    padding-top: 26px;
+    font-size: 30.48px;
+    line-height: 40.24px;
+  }
+}

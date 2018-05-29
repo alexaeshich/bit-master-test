@@ -1,0 +1,23 @@
+/*Глобальные стили*/
+@import 'global/fonts.scss';
+@import 'global/variables.scss';
+@import 'global/scaffolding.scss';
+@import 'global/visually-hidden.scss';
+/*Конец - Глобальных стилей*/
+/*Блок: Шапка сайта - навигация*/
+@import 'blocks/page-header.scss';
+@import 'blocks/main-nav.scss';
+/*Основаня часть*/
+/*Блок: Вступительная часть*/
+@import 'blocks/intro.scss';
+/*Блок: Форма с регистрацией*/
+@import 'blocks/registration.scss';
+/*Блок: О тренинге*/
+@import 'blocks/about-trainings.scss';
+/*Блок: Медиа*/
+@import 'blocks/media.scss';
+/*Блок: Отзывы*/
+@import 'blocks/reviews.scss';
+/*Конец - Основаной части*/
+/*Блок: Подвал сайта*/
+@import 'blocks/page-footer.scss';

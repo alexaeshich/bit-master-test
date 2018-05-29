@@ -1,0 +1,89 @@
+.media {
+  background-color: #282828;
+
+}
+
+.media__wrapper {
+  min-height: 1303px;
+  padding-top: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.media__item {
+  height: 636px;
+  cursor: pointer;
+  filter:brightness(60%);
+
+  &--near-Moscow {
+    background-image:
+      url("../img/Moscow-video.png"),
+      url("../img/Moscow-event.png");
+    background-repeat:no-repeat;
+    background-size: 342px 61px , cover;
+    background-position: center, center;
+  }
+  &--near-Kazahstan {
+    background-image:
+      url("../img/Kazahstan-video.png"),
+      url("../img/Kazahstan-event.png");
+    background-repeat:no-repeat;
+    background-size: 342px 61px, cover;
+    background-position: center, center;
+  }
+  &:hover, &:focus {
+    filter:none;
+    transition: filter .4s ease-in-out;
+  }
+}
+
+@media (min-width:$tablet-width) {
+
+  .media__wrapper {
+    min-height: 400px;
+    padding-top: 34px;
+    box-sizing: border-box;
+    flex-direction: row;
+  }
+
+  .media__item {
+    height: 367px;
+    width: 50%;
+
+    &--near-Moscow {
+      background-position: 80% 50%, top center;
+      background-size: 198px 35px , cover;
+    }
+    &--near-Kazahstan {
+      background-position: 21% 50%, top center;
+      background-size: 198px 35px , cover;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+
+  .media__wrapper {
+    min-height: 918px;
+    padding-top: 77px;
+    box-sizing: border-box;
+    flex-direction: row;
+  }
+
+  .media__item {
+    height: 840px;
+    width: 50%;
+
+    &--near-Moscow {
+      background-position: 80% 50%, top center;
+      background-size: 452px 80px , cover;
+    }
+    &--near-Kazahstan {
+      background-position: 21% 50%, top center;
+      background-size: 452px 80px , cover;
+    }
+  }
+
+}

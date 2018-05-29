@@ -1,0 +1,149 @@
+.registration {
+  background-color: #282828;
+  min-height: 296px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration__wrapper {
+  width: 720px;
+  margin: 0;
+}
+.registration__form {
+  height: 244px;
+  padding-top: 32px;
+  padding-bottom: 29px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.registration__legend {
+  margin: 0;
+  padding-top:32px;
+  text-align: center;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 20.58px;
+  color: #ffffff;
+}
+
+.registration__name,
+.registration__tel,
+.registration__email {
+  font-family: "roboto-light", Arial, sans-serif;
+  font-size: 10px;
+  line-height: 25.26px;
+  color: #909090;
+  border: none;
+  box-sizing: border-box;
+  width: 227px;
+  height: 32px;
+  padding-left: 6px;
+   &:focus, &:hover {
+     outline: 2px solid #f24841;
+     color:#000000;
+   }
+}
+
+.registration__button {
+  margin-top: 21px;
+  width: 227px;
+  height: 32px;
+  background-color: #f24841;
+  font-family: "roboto-black", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 25.26px;
+  border: none;
+  color:#ffffff;
+  cursor: pointer;
+    &:focus, &:hover {
+      outline: 2px solid #f24841;
+      background-color: #f15953;
+    }
+}
+
+@media (min-width:$tablet-width) {
+  .registration {
+    min-height: 97px;
+  }
+  .registration__wrapper {
+    width: 598px;
+    padding-left: 33px;
+    padding-right: 10px;
+  }
+  .registration__legend {
+    padding-top: 12px;
+    padding-left: 6px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 21.5px;
+  }
+  .registration__form {
+    height: 48px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: center;
+  }
+  .registration__name,
+  .registration__tel,
+  .registration__email {
+    margin-top: 2px;
+    width: 129px;
+    height: 27px;
+    font-size: 8.6px;
+    line-height: 21.53px;
+  }
+  .registration__button {
+    margin-top: 2px;
+    width: 194px;
+    height: 27px;
+    font-size: 13px;
+    line-height: 21.53px;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .registration__wrapper {
+    width: 1117px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .registration__legend {
+    padding-top: 19px;
+    padding-left: 14px;
+    text-align: left;
+    font-size: 24px;
+    line-height: 40.25px;
+  }
+  .registration__form {
+    height: 120px;
+    padding-top: 18px;
+    padding-bottom: 51px;
+  }
+  .registration__name,
+  .registration__tel,
+  .registration__email {
+    margin-top: 2px;
+    width: 242px;
+    height: 50px;
+    font-size: 16.1px;
+    line-height: 40.24px;
+  }
+  .registration__button {
+    margin-top: 2px;
+    width: 362px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 40.25px;
+  }
+}
